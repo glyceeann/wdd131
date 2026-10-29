@@ -1,0 +1,174 @@
+/* reset spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* body style */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* course title as block for centering */
+#course-title {
+    display: block;
+    text-align: center;
+    background-color: #1d4d4f;
+    color: white;
+    padding: 1.5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+}
+
+/* nav using flex */
+nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: #333;
+    padding: 0.8rem;
+}
+
+/* nav links */
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+}
+
+/* hover effect for nav */
+nav a:hover {
+    background-color: #1d4d4f;
+    border-radius: 5px;
+    color: #ffde59;
+}
+
+/* main centered */
+main {
+    max-width: 1000px;
+    margin: 1rem auto;
+    padding: 0 1rem;
+}
+
+/* my name heading */
+main h1 {
+    text-align: center;
+    margin: 1rem 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* cards layout using grid */
+.cards-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1rem;
+    align-items: stretch;
+}
+
+/* card box */
+.card {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* card header */
+.card h2 {
+    background-color: #1d4d4f;
+    color: white;
+    text-align: center;
+    padding: 0.8rem;
+}
+
+/* card content */
+.card-content {
+    padding: 1rem;
+    flex: 1;
+}
+
+/* about top part - text and photo side by side */
+.about-top {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.about-top p {
+    flex: 1;
+}
+
+.about-top img {
+    width: 130px;
+    border-radius: 5px;
+    flex-shrink: 0;
+}
+
+/* country heading */
+.card h3 {
+    text-align: center;
+    margin: 1rem 0;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 0.5rem;
+}
+
+/* flag and country text */
+.country-info {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.country-info figure {
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.country-info figure img {
+    width: 100px;
+    border: 1px solid #ccc;
+}
+
+.country-info figcaption {
+    font-size: 0.65rem;
+    font-style: italic;
+    max-width: 100px;
+}
+
+.country-info p {
+    flex: 1;
+}
+
+/* resources list centered */
+.resources {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.resources ul {
+    padding-left: 1.5rem;
+}
+
+.resources li {
+    margin: 0.7rem 0;
+}
+
+/* footer style */
+footer {
+    background-color: #1d4d4f;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 1rem;
+}
+
+/* last modified text color */
+#lastModified {
+    color: #ffde59;
+    font-size: 0.8rem;
+}

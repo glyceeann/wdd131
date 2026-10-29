@@ -1,11 +1,89 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>WDD131 Test</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 – Dynamic Web Fundamentals – Glycee Ann Bullecer Picar</title>
+    <!-- page description -->
+    <meta name="description" content="WDD 131 – Dynamic Web Fundamentals – Glycee Ann Bullecer Picar – Home page for WDD 131 with about me, web dev resources">
+    <!-- author name -->
+    <meta name="author" content="Glycee Ann Bullecer Picar">
+    
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    
+    <!-- my css file -->
+    <link rel="stylesheet" href="styles/base.css">
+    <!-- my js file -->
+    <script src="scripts/getdates.js" defer></script>
 </head>
 <body>
-    <h1>Hello! It's Working!</h1>
-    <p>This is my test index.html for WDD131</p>
-    <p>By Glycee Ann Picar - glyceeann</p>
+    <!-- header part -->
+    <header>
+        <!-- course title -->
+        <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
+        <!-- navigation menu -->
+        <nav>
+            <a href="https://www.linkedin.com/in/glycee-ann-picar-418112411/" target="_blank">LinkedIn</a>
+            <a href="https://byupw.instructure.com/">Canvas</a>
+            <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/moro/7?lang=eng&id=p45-p47#p45" target="_blank">Scripture</a>
+            <a href="#">Final Project</a>
+        </nav>
+    </header>
+
+    <!-- main content -->
+    <main>
+        <!-- my name -->
+        <h1>Glycee Ann Bullecer Picar</h1>
+        <!-- cards wrapper -->
+        <div class="cards-container">
+            <!-- about me card -->
+            <section class="card">
+                <h2>About Me</h2>
+                <div class="card-content">
+                    <!-- text and photo side by side -->
+                    <div class="about-top">
+                        <p>My name is Glycee Ann Bullecer Picar and I am studying WDD 131 – Dynamic Web Fundamentals. I live in Al Kharj, Riyadh Region, Saudi Arabia. I love learning new technologies, creating simple and beautiful websites, and spending time with my family.</p>
+                        <img src="images/profile.jpg" alt="Photo of Glycee Ann Bullecer Picar">
+                    </div>
+                    
+                    <!-- country title -->
+                    <h3>Saudi Arabia</h3>
+                    <!-- flag and info -->
+                    <div class="country-info">
+                        <figure>
+                            <img src="images/flag.jpg" alt="Official Flag of Saudi Arabia">
+                            <figcaption>Official Flag of Saudi Arabia</figcaption>
+                        </figure>
+                        <p>Saudi Arabia is a country in the Middle East with rich culture and history. Al Kharj is known for its farms, dairy production, and beautiful desert landscapes. It is a peaceful place where tradition and modern development meet.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- resources card -->
+            <section class="card">
+                <h2>Web Dev Resources</h2>
+                <!-- list centered -->
+                <div class="card-content resources">
+                    <ul>
+                        <li><a href="https://dev.to/" target="_blank">Dev.to Community</a></li>
+                        <li><a href="https://www.smashingmagazine.com/" target="_blank">Smashing Magazine</a></li>
+                        <li><a href="https://css-tricks.com/" target="_blank">CSS Tricks</a></li>
+                        <li><a href="https://www.w3schools.com/" target="_blank">W3 Schools</a></li>
+                        <li><a href="https://www.udemy.com/" target="_blank">Udemy</a></li>
+                        <li><a href="https://picsum.photos/" target="_blank">Lorem Picsum Image Placeholder</a></li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- footer -->
+    <footer>
+        <p>&copy;<span id="currentyear"></span> 🌸 Glycee Ann Bullecer Picar 🌸 Saudi Arabia</p>
+        <p id="lastModified"></p>
+    </footer>
 </body>
 </html>
