@@ -11,6 +11,11 @@ body {
     background-color: #f4f4f4;
 }
 
+/* header - required for audit */
+header {
+    background-color: #1d4d4f;
+}
+
 /* course title as block for centering */
 #course-title {
     display: block;
