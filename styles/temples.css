@@ -1,0 +1,83 @@
+/* Reset default spacing */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* Main font for whole page */
+body { font-family: 'Roboto', sans-serif; }
+
+/* Header: purple bar, title left, button right */
+header {
+  background-color: #4a0072;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  position: relative;
+}
+
+/* Fancy font for title */
+header h1 { font-family: 'Playfair Display', serif; font-size: 1.5rem; }
+
+/* Hamburger button style */
+#menu {
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+/* Show ☰ when closed */
+#menu::before { content: "☰"; }
+/* Show ✕ when open */
+#menu.open::before { content: "✕"; }
+
+/* Nav container */
+nav { background-color: #4a0072; }
+
+/* Nav list: hidden in mobile, stacked vertically */
+.navigation {
+  list-style: none;
+  display: none;
+  flex-direction: column;
+}
+/* JS adds .open to show menu */
+.navigation.open { display: flex; }
+.navigation li { text-align: center; }
+
+/* Nav links */
+.navigation a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 0.8rem;
+}
+/* Hover + active link effect */
+.navigation a:hover, .navigation a.active {
+  background-color: #ffd700;
+  color: #4a0072;
+  font-weight: 700;
+}
+
+/* Main: centered, limited width */
+main { max-width: 800px; margin: 0 auto; padding: 1rem; }
+main h2 { text-align: center; margin-bottom: 1rem; font-family: 'Playfair Display', serif; }
+
+/* Grid: 1 column in mobile */
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+/* Center each image + caption */
+figure { text-align: center; }
+figure img { width: 100%; height: auto; border-radius: 5px; }
+figcaption { margin-top: 0.3rem; font-size: 0.9rem; }
+
+/* Footer: same purple as header */
+footer {
+  background-color: #4a0072;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 1rem;
+}

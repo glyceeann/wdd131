@@ -1,0 +1,45 @@
+/* Reset default spacing */
+* { margin: 0; padding: 0; }
+
+/* Center everything on the page */
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: Acme, Arial, sans-serif;
+}
+
+/* Title size */
+h1 { font-size: 1.5rem; }
+
+/* The gray box */
+main {
+  margin: 1rem auto;
+  border: 1px solid rgb(0 0 0 / .1);
+  padding: 1rem;
+  background-color: #ddd;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Space inside input and buttons */
+input, button { padding: 0.5rem; }
+
+/* Space around the button */
+button { margin: 0.5rem; }
+
+/* Keep delete button small */
+.delete { width: fit-content; }
+
+/* List spacing */
+.list { padding: 0.5rem; }
+ul { margin: 1rem; list-style: none; }
+
+/* Chapter and delete button on one line */
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

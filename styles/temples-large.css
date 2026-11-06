@@ -1,0 +1,20 @@
+/* Only applies when screen is 640px or wider */
+@media screen and (min-width: 640px) {
+  /* More side padding on large screens */
+  header { padding: 1rem 2rem; }
+
+  /* Hide hamburger on large screens */
+  #menu { display: none; }
+
+  /* Nav: always show, in a row */
+  .navigation {
+    display: flex !important;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  /* Grid: 3 columns on large screens */
+  .container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
