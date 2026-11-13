@@ -1,0 +1,92 @@
+/* ============================================ */
+/* WDD 131 - W03 Design Principles - design.css   */
+/* Starter CSS from CodePen + ALL fixes applied   */
+/* ============================================ */
+
+/* BODY - base styles for the whole page */
+body {
+  font-family: Roboto, helvetica, sans-serif;
+  /* Typography: ONE font family (Roboto), fallback if it fails */
+}
+
+/* HEADER, MAIN, FOOTER - shared layout */
+header,
+main,
+footer {
+  max-width: 760px;
+  /* Page never gets wider than 760px, so lines stay readable */
+  margin: 0 auto;
+  /* 0 top/bottom, auto left/right = centers the page */
+}
+
+/* .BANNER - replaces the old <marquee> */
+/* FIXED: marquee was deprecated, moving, distracting, not accessible */
+.banner {
+  padding: 1rem;
+  /* Space inside the banner so text doesn't touch the edges */
+  background-color: #eee;
+  /* Light gray background */
+  text-align: center;
+  /* Banner text stays centered (announcement style) */
+}
+
+/* H1 - main page title */
+h1 {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  /* Thin light line under the title = Visual Hierarchy / separation */
+}
+
+/* MAIN - the 2-column layout */
+/* FIXED: starter was just display:grid with 1 column */
+main {
+  display: grid;
+  /* Turns <main> into a grid container */
+  grid-template-columns: 1fr 200px;
+  /* Column 1 = flexible (Article), Column 2 = 200px fixed (List) */
+  grid-gap: 1.5rem;
+  /* Gap between columns/rows = whitespace, Clarity */
+}
+
+/* H2 - section heading inside <main> */
+/* FIXED: starter was text-align: center */
+h2 {
+  color: navy;
+  /* Dark blue = strong Visual Hierarchy */
+  text-align: left;
+  /* FIXED: left-aligned to match everything else = Consistency / Alignment */
+  grid-column: 1 / 3;
+  /* FIXED: spans from grid line 1 to grid line 3 = spans BOTH columns */
+}
+
+/* ARTICLE PARAGRAPH */
+article p {
+  text-align: justify;
+  /* Both left + right edges line up straight */
+}
+
+/* .CALLOUT - the purple contrast box */
+/* FIXED x3: padding, color contrast, grid span */
+.callout {
+  color: #fff;
+  /* FIXED: was #777 (gray). #777 on #702963 = 2.14:1 = FAILS AA */
+  /* NOW: white #fff on #702963 = 9.61:1 = PASSES AA (4.5:1) + AAA (7:1) */
+  background-color: #702963;
+  /* Dark purple background - kept from starter, NOT changed */
+  padding: 1rem;
+  /* FIXED: starter had NO padding, text touched the edges. Now breathing room = Clarity */
+  grid-column: 1 / 3;
+  /* Spans both columns, so the box is full-width under Article + List */
+}
+
+/* FOOTER - bottom of page */
+/* FIXED: starter was text-align: right */
+footer {
+  margin-top: 1rem;
+  /* Space above footer */
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  /* Thin line above footer, matches h1 line = Consistency */
+  font-size: smaller;
+  /* Footer text slightly smaller = Visual Hierarchy (less important) */
+  text-align: left;
+  /* FIXED: moved from right to left = Consistency / Alignment */
+}
