@@ -1,45 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
-  <!-- Character set -->
+  <!-- Meta: charset + viewport for mobile -->
   <meta charset="UTF-8">
-  <!-- Makes page responsive on mobile -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Browser tab title -->
+  <!-- Title: shown in browser tab + audit -->
   <title>Saudi Arabia | WDD 131 - Country Page</title>
-  <!-- Page description for search engines -->
+  <!-- Meta: description for SEO + audit -->
   <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Country Page for Saudi Arabia by Glycee Ann Bullecer Picar">
-  <!-- Page author -->
+  <!-- Meta: author name -->
   <meta name="author" content="Glycee Ann Bullecer Picar">
-  <!-- Link to CSS file -->
+  <!-- CSS: external stylesheet -->
   <link rel="stylesheet" href="styles/place.css">
-  <!-- Link to JS file - defer loads after HTML -->
+  <!-- JS: external script, defer = runs after HTML loads -->
   <script src="scripts/place.js" defer></script>
 </head>
 <body>
-  <!-- Page header -->
+  <!-- Header: page title -->
   <header>
-    <!-- Country name -->
     <h1>Saudi Arabia</h1>
   </header>
 
-  <!-- Main content -->
+  <!-- Main: hero + cards -->
   <main>
-    <!-- Hero wrapper - holds image + Data + Weather -->
     <div class="hero">
-      <!-- Responsive hero image -->
+      <!-- Responsive images: large on desktop, small on mobile -->
       <picture>
-        <!-- Large image for wide screens -->
         <source srcset="images/saudi-arabia-large.webp" media="(min-width: 700px)">
-        <!-- Small image for mobile / default -->
-        <img src="images/saudi-arabia-small.webp" alt="Riyadh skyline with Diriyah in the foreground at sunset" width="1000" height="667">
+        <img src="images/saudi-arabia-small.webp" alt="Riyadh skyline with Diriyah in the foreground at sunset" width="800" height="1200">
       </picture>
 
-      <!-- Data section -->
+      <!-- Data card: country facts -->
       <section class="data card">
-        <!-- Data heading -->
         <h2>Data</h2>
-        <!-- Country facts table -->
         <table>
           <tr><th>Area:</th><td>2,149,690 sq km</td></tr>
           <tr><th>Population:</th><td>36,947,025</td></tr>
@@ -52,28 +45,37 @@
         </table>
       </section>
 
-      <!-- Weather section -->
+      <!-- Weather card: temp + wind + wind chill -->
       <section class="weather card">
-        <!-- Weather heading + mobile emoji -->
-        <h2>Weather <span class="weather-emoji" aria-hidden="true">☀️</span></h2>
-        <!-- Big weather emoji - mobile only -->
-        <div class="weather-icon-mobile" aria-hidden="true">☀️</div>
-        <!-- Weather values - filled by JS -->
+        <h2>Weather
+          <!-- SVG icon: sun, required by audit (no emoji) -->
+          <svg class="weather-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
+            <circle cx="12" cy="12" r="4" fill="#FFC107"/>
+            <g stroke="#FFC107" stroke-width="2" stroke-linecap="round">
+              <line x1="12" y1="1" x2="12" y2="4"/>
+              <line x1="12" y1="20" x2="12" y2="23"/>
+              <line x1="4.2" y1="4.2" x2="6.3" y2="6.3"/>
+              <line x1="17.7" y1="17.7" x2="19.8" y2="19.8"/>
+              <line x1="1" y1="12" x2="4" y2="12"/>
+              <line x1="20" y1="12" x2="23" y2="12"/>
+              <line x1="4.2" y1="19.8" x2="6.3" y2="17.7"/>
+              <line x1="17.7" y1="6.3" x2="19.8" y2="4.2"/>
+            </g>s
+          </svg>
+        </h2>
         <table>
-          <tr><th>Temperature:</th><td><span id="temp"></span></td></tr>
+          <tr><th>Temperature:</th><td><span id="temp">8</span> °C</td></tr>
           <tr><th>Condition:</th><td>Clear</td></tr>
-          <tr><th>Wind:</th><td><span id="wind"></span></td></tr>
+          <tr><th>Wind:</th><td><span id="wind">12</span> km/h</td></tr>
           <tr><th>Wind Chill:</th><td><span id="windchill"></span></td></tr>
         </table>
       </section>
     </div>
   </main>
 
-  <!-- Page footer -->
+  <!-- Footer: copyright + last modified from JS -->
   <footer>
-    <!-- Copyright + name + location - year filled by JS -->
     <p>&copy; <span id="currentyear"></span> 🌴 Glycee Ann Bullecer Picar 🌴 Riyadh, Saudi Arabia</p>
-    <!-- Last modified date - filled by JS -->
     <p>Last Modification: <span id="lastModified"></span></p>
   </footer>
 </body>

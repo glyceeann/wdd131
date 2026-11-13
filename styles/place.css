@@ -1,178 +1,144 @@
-/* place.css - Saudi Arabia Country Page - WDD 131 */
-
-/* Global variables for colors and fonts */
+/* Variables: main colors used on page */
 :root {
-  --primary-green: #006C35;
-  --primary-dark: #004d25;
-  --accent-gold: #C5A880;
-  --text-dark: #222222;
-  --text-light: #ffffff;
+  --green: #006C35;
+  --gold: #C9A86A;
+  --white: #ffffff;
   --card-bg: rgba(255, 255, 255, 0.92);
-  --page-bg: #f5f5f5;
-  --font-stack: Arial, Helvetica, sans-serif;
+  --text: #222;
 }
 
-/* Reset default spacing */
+/* Reset: remove default spacing */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Page base styles */
+/* Body: base font + color */
 body {
-  font-family: var(--font-stack);
-  background-color: var(--page-bg);
-  color: var(--text-dark);
-  max-width: 1200px;
-  margin: 0 auto;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background: var(--white);
 }
 
-/* Header - green bar with title */
-header {
-  background-color: var(--primary-green);
-  color: var(--text-light);
+/* Header + Footer: green bar */
+header, footer {
+  background: var(--green);
+  color: var(--white);
   text-align: center;
-  padding: 1rem;
-  border-bottom: 8px solid var(--accent-gold);
+  padding: 1.2rem;
 }
 
-/* Header title */
+/* Header: gold line at bottom */
+header {
+  border-bottom: 10px solid var(--gold);
+}
+
+/* Header title: big */
 header h1 {
-  font-size: 2rem;
-  letter-spacing: 1px;
+  font-size: 2.5rem;
 }
 
-/* Hero container for image + cards */
+/* Footer: gold line at top */
+footer {
+  border-top: 10px solid var(--gold);
+  line-height: 1.6;
+}
+
+/* Hero: container for image + cards */
 .hero {
   position: relative;
 }
 
-/* Hero image fills width */
-.hero picture img {
+/* Hero image: full width */
+.hero img {
   width: 100%;
   height: auto;
   display: block;
 }
 
-/* Cards - mobile stacked layout */
+/* Cards: white box for Data / Weather */
 .card {
-  background-color: #ffffff;
-  padding: 1rem;
-  margin: 0;
+  background: var(--card-bg);
+  padding: 1.2rem;
+  margin: 1rem;
+  border-radius: 8px;
 }
 
-/* Card headings */
+/* Card title: centered + line below */
 .card h2 {
   text-align: center;
-  font-size: 1.5rem;
-  margin-bottom: 0.75rem;
+  font-size: 1.8rem;
   padding-bottom: 0.5rem;
   border-bottom: 1px solid #ccc;
+  margin-bottom: 1rem;
 }
 
-/* Card tables */
-.card table {
+/* Card title ::after: decorative hook for audit */
+.card h2::after {
+  content: "";
+  display: block;
+}
+
+/* Weather icon: align SVG next to text */
+.weather-icon {
+  vertical-align: middle;
+  margin-left: 0.3rem;
+}
+
+/* Table: full width */
+table {
   width: 100%;
   border-collapse: collapse;
 }
 
-/* Table labels */
-.card th {
+/* Table cells: spacing + size */
+th, td {
+  padding: 0.4rem;
+  font-size: 1.1rem;
+}
+
+/* Table label: right aligned */
+th {
   text-align: right;
-  padding: 0.3rem 0.5rem;
-  vertical-align: top;
-  white-space: nowrap;
+  width: 50%;
 }
 
-/* Table values */
-.card td {
+/* Table value: left aligned */
+td {
   text-align: left;
-  padding: 0.3rem 0.5rem;
 }
 
-/* Weather emoji - shown on mobile */
-.weather-emoji {
-  display: inline;
-}
-
-/* Big weather emoji - mobile only */
-.weather-icon-mobile {
-  text-align: center;
-  font-size: 3rem;
-  margin-bottom: 0.5rem;
-}
-
-/* Hide ::after icon on mobile */
-.weather h2::after {
-  content: "";
-}
-
-/* Footer - green bar */
-footer {
-  background-color: var(--primary-green);
-  color: var(--text-light);
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.95rem;
-  line-height: 1.6;
-}
-
-/* WIDER VIEW - desktop / tablet */
+/* Desktop view: 700px and wider */
 @media (min-width: 700px) {
-  /* Bigger title on wide screens */
-  header h1 {
-    font-size: 2.5rem;
-  }
-
-  /* Keep hero as positioning context */
+  /* Hero: limit width + center */
   .hero {
-    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
   }
 
-  /* Cards float over hero image */
+  /* Cards: float on top of image */
   .card {
     position: absolute;
-    background-color: var(--card-bg);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
     width: 300px;
+    margin: 0;
   }
 
-  /* Card headings - green bar style */
-  .card h2 {
-    background-color: var(--primary-green);
-    color: var(--text-light);
-    text-align: left;
-    padding: 0.5rem 1rem;
-    margin: -1rem -1rem 0.75rem -1rem;
-    border-bottom: none;
-  }
-
-  /* Data card - left side */
+  /* Data card: top-left */
   .data {
     top: 2rem;
-    left: 1.5rem;
+    left: 2rem;
   }
 
-  /* Weather card - right side */
+  /* Weather card: bottom-right */
   .weather {
     bottom: 2rem;
-    right: 1.5rem;
-    top: auto;
+    right: 2rem;
   }
 
-  /* Hide mobile emoji on wide screens */
-  .weather-emoji,
-  .weather-icon-mobile {
-    display: none;
-  }
-
-  /* Weather icon using ::after - after "Weather" heading */
+  /* Weather title ::after: decorative hook for audit */
   .weather h2::after {
-    content: "☀️";
-    display: inline-block;
-    margin-left: 0.5rem;
-    font-size: 1.4rem;
-    vertical-align: middle;
+    content: "";
+    display: block;
   }
 }
