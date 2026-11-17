@@ -1,0 +1,75 @@
+/* lazyload.css - WDD 131 Week 04 */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #222;
+  line-height: 1.5;
+}
+
+header {
+  background-color: #1a3a5a;
+  color: white;
+  text-align: center;
+  padding: 1.5rem 1rem;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+main {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 1rem;
+  text-align: center;
+}
+
+main h1 {
+  color: #1a3a5a;
+}
+
+main p {
+  margin-bottom: 2rem;
+}
+
+/* Single centered column - regardless of screen size */
+main img {
+  display: block;
+  margin: 0 auto 1.5rem auto;
+  width: 400px;
+  height: 600px;
+  object-fit: cover;
+  background-color: #000;
+
+  /* Fade from black animation */
+  animation: fadeFromBlack 1.5s ease-in;
+}
+
+@keyframes fadeFromBlack {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+footer {
+  background-color: #1a3a5a;
+  color: white;
+  text-align: center;
+  padding: 1.25rem 1rem;
+  margin-top: 2rem;
+}
+
+footer p {
+  margin: 0.25rem 0;
+}
