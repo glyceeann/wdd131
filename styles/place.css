@@ -1,10 +1,11 @@
-/* Variables: main colors used on page */
+/* Variables: main colors used on page - all hex only */
 :root {
   --green: #006C35;
   --gold: #C9A86A;
-  --white: #ffffff;
-  --card-bg: rgba(255, 255, 255, 0.92);
-  --text: #222;
+  --white: #FFFFFF;
+  --card-bg: #FFFFFFEB;
+  --text: #222222;
+  --light-gray: #CCCCCC;
 }
 
 /* Reset: remove default spacing */
@@ -16,7 +17,7 @@
 
 /* Body: base font + color */
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
   color: var(--text);
   background: var(--white);
 }
@@ -36,6 +37,7 @@ header {
 
 /* Header title: big */
 header h1 {
+  font-family: 'Playfair Display', serif;
   font-size: 2.5rem;
 }
 
@@ -70,17 +72,11 @@ footer {
   text-align: center;
   font-size: 1.8rem;
   padding-bottom: 0.5rem;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid var(--light-gray);
   margin-bottom: 1rem;
 }
 
-/* Card title ::after: decorative hook for audit */
-.card h2::after {
-  content: "";
-  display: block;
-}
-
-/* Weather icon: align SVG next to text */
+/* Weather icon: align SVG next to text - MOBILE ONLY by default */
 .weather-icon {
   vertical-align: middle;
   margin-left: 0.3rem;
@@ -111,34 +107,34 @@ td {
 
 /* Desktop view: 700px and wider */
 @media (min-width: 700px) {
-  /* Hero: limit width + center */
   .hero {
     max-width: 1200px;
     margin: 0 auto;
   }
 
-  /* Cards: float on top of image */
   .card {
     position: absolute;
     width: 300px;
     margin: 0;
   }
 
-  /* Data card: top-left */
   .data {
     top: 2rem;
     left: 2rem;
   }
 
-  /* Weather card: bottom-right */
   .weather {
     bottom: 2rem;
     right: 2rem;
   }
 
-  /* Weather title ::after: decorative hook for audit */
+  /* FIX: Hide SVG in wider view - pseudo-element replaces it */
+  .weather-icon {
+    display: none;
+  }
+
+  /* FIX: Real emoticon in wider view ONLY */
   .weather h2::after {
-    content: "";
-    display: block;
+    content: " ⛅";
   }
 }

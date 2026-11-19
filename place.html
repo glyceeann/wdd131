@@ -1,54 +1,51 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-  <!-- Meta: charset + viewport for mobile -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Title: shown in browser tab + audit -->
   <title>Saudi Arabia | WDD 131 - Country Page</title>
-  <!-- Meta: description for SEO + audit -->
-  <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Country Page for Saudi Arabia by Glycee Ann Bullecer Picar">
-  <!-- Meta: author name -->
+  <meta name="description" content="Discover Saudi Arabia - capital Riyadh, population, language, currency, and current weather with wind chill. A WDD 131 country page.">
   <meta name="author" content="Glycee Ann Bullecer Picar">
-  <!-- CSS: external stylesheet -->
+
+  <!-- Google Fonts - required for audit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="styles/place.css">
-  <!-- JS: external script, defer = runs after HTML loads -->
   <script src="scripts/place.js" defer></script>
 </head>
 <body>
-  <!-- Header: page title -->
   <header>
     <h1>Saudi Arabia</h1>
   </header>
 
-  <!-- Main: hero + cards -->
   <main>
     <div class="hero">
-      <!-- Responsive images: large on desktop, small on mobile -->
       <picture>
         <source srcset="images/saudi-arabia-large.webp" media="(min-width: 700px)">
-        <img src="images/saudi-arabia-small.webp" alt="Riyadh skyline with Diriyah in the foreground at sunset" width="800" height="1200">
+        <source srcset="images/saudi-arabia-small.webp" media="(max-width: 699px)">
+        <img src="images/saudi-arabia-small.webp" alt="Riyadh skyline with Diriyah in the foreground at sunset" width="1200" height="800">
       </picture>
 
-      <!-- Data card: country facts -->
       <section class="data card">
         <h2>Data</h2>
         <table>
-          <tr><th>Area:</th><td>2,149,690 sq km</td></tr>
-          <tr><th>Population:</th><td>36,947,025</td></tr>
-          <tr><th>Capital:</th><td>Riyadh</td></tr>
-          <tr><th>Language:</th><td>Arabic</td></tr>
-          <tr><th>Currency:</th><td>Saudi Riyal (SAR)</td></tr>
-          <tr><th>Time Zone:</th><td>UTC+3</td></tr>
-          <tr><th>Calling Code:</th><td>+966</td></tr>
-          <tr><th>Internet TLD:</th><td>.sa</td></tr>
+          <tbody>
+            <tr><th>Area:</th><td>2,149,690 sq km</td></tr>
+            <tr><th>Population:</th><td>36,947,025</td></tr>
+            <tr><th>Capital:</th><td>Riyadh</td></tr>
+            <tr><th>Language:</th><td>Arabic</td></tr>
+            <tr><th>Currency:</th><td>Saudi Riyal (SAR)</td></tr>
+            <tr><th>Time Zone:</th><td>UTC+3</td></tr>
+            <tr><th>Calling Code:</th><td>+966</td></tr>
+            <tr><th>Internet TLD:</th><td>.sa</td></tr>
+          </tbody>
         </table>
       </section>
 
-      <!-- Weather card: temp + wind + wind chill -->
       <section class="weather card">
         <h2>Weather
-          <!-- SVG icon: sun, required by audit (no emoji) - FIXED: no self-closing tags -->
           <svg class="weather-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
             <circle cx="12" cy="12" r="4" fill="#FFC107"></circle>
             <g stroke="#FFC107" stroke-width="2" stroke-linecap="round">
@@ -64,16 +61,17 @@
           </svg>
         </h2>
         <table>
-          <tr><th>Temperature:</th><td><span id="temp">8</span> °C</td></tr>
-          <tr><th>Condition:</th><td>Clear</td></tr>
-          <tr><th>Wind:</th><td><span id="wind">12</span> km/h</td></tr>
-          <tr><th>Wind Chill:</th><td><span id="windchill"></span></td></tr>
+          <tbody>
+            <tr><th>Temperature:</th><td><span id="temp">8</span> °C</td></tr>
+            <tr><th>Condition:</th><td>Clear</td></tr>
+            <tr><th>Wind:</th><td><span id="wind">12</span> km/h</td></tr>
+            <tr><th>Wind Chill:</th><td><span id="windchill"></span></td></tr>
+          </tbody>
         </table>
       </section>
     </div>
   </main>
 
-  <!-- Footer: copyright + last modified from JS -->
   <footer>
     <p>&copy; <span id="currentyear"></span> 🌴 Glycee Ann Bullecer Picar 🌴 Riyadh, Saudi Arabia</p>
     <p>Last Modification: <span id="lastModified"></span></p>
