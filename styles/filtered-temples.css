@@ -4,7 +4,7 @@ body { font-family: 'Roboto', sans-serif; }
 
 header {
   background-color: #4a0072;
-  color: white;
+  color: #ffffff;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -18,7 +18,7 @@ header h1 { font-family: 'Playfair Display', serif; font-size: 1.5rem; }
   font-size: 1.8rem;
   background: none;
   border: none;
-  color: white;
+  color: #ffffff;
   cursor: pointer;
 }
 #menu::before { content: "☰"; }
@@ -36,7 +36,7 @@ nav { background-color: #4a0072; }
 
 .navigation a {
   display: block;
-  color: white;
+  color: #ffffff;
   text-decoration: none;
   padding: 0.8rem;
 }
@@ -49,17 +49,15 @@ nav { background-color: #4a0072; }
 main { max-width: 1000px; margin: 0 auto; padding: 1rem; }
 main h2 { text-align: center; margin-bottom: 1rem; font-family: 'Playfair Display', serif; }
 
-/* Grid: 1 column in mobile */
 .container {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
 }
 
-/* Temple Card - matches example screenshot */
 .temple-card {
   background-color: #f4f1f8;
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
   border-radius: 8px;
   padding: 1rem;
   text-align: center;
@@ -84,12 +82,12 @@ main h2 { text-align: center; margin-bottom: 1rem; font-family: 'Playfair Displa
   height: auto;
   margin-top: 0.8rem;
   border-radius: 5px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px #00000033;
 }
 
 footer {
   background-color: #4a0072;
-  color: white;
+  color: #ffffff;
   text-align: center;
   padding: 1rem;
   margin-top: 1rem;

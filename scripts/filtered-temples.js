@@ -62,7 +62,6 @@ const temples = [
     area: 116642,
     imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
   },
-  // --- 3 ADDED TEMPLES ---
   {
     templeName: "Salt Lake Utah",
     location: "Salt Lake City, Utah, United States",
@@ -139,17 +138,13 @@ navLinks.forEach((link) => {
   link.addEventListener("click", (event) => {
     event.preventDefault();
 
-    // Remove active from all, add to clicked
     navLinks.forEach((a) => a.classList.remove("active"));
     link.classList.add("active");
 
-    // Change main heading
     mainHeading.textContent = link.textContent;
 
-    // Filter
     filterTemples(link.id);
 
-    // Close mobile menu after click
     nav.classList.remove("open");
     menuBtn.classList.remove("open");
   });
